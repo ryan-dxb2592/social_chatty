@@ -1,11 +1,5 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
-'use client'
-import React, { useState } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+
 
 const App: React.FC = () => {
  
@@ -148,8 +142,7 @@ const App: React.FC = () => {
   //   </div>
   // );
   return (
-    <div className="flex flex-1 h-screen bg-gray-800 w-full">
-      <SidebarTrigger  />
+    <div className="  ">
       <h1>Hello</h1>
     </div>
   );
