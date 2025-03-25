@@ -3,12 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowLeft, User, Search, Video, Mic, Info, MoreVertical } from "lucide-react";
-import { useChatSidebarStore } from "@/store/use-chat-sidebar";
+import { ChatSidebarStore } from "@/store/chat-sidebar-store";
 import ChatHeaderDropdown from "./chat-header-dropdown";
 
 
 const ChatHeader = () => {
-    const {isOpen, onOpen, onClose} = useChatSidebarStore();
+    const {isOpen, onOpen, onClose} = ChatSidebarStore();
 
     const toggleSidebar = () => {
         if (isOpen) {
@@ -18,7 +18,7 @@ const ChatHeader = () => {
         }
     }
     return (
-        <div className="flex items-center justify-between p-4 h-16 border-b bg-white">
+        <div className="flex items-center justify-between p-4 h-16 border-b bg-white shrink-0">
             <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" className="cursor-pointer">
                     <ArrowLeft />

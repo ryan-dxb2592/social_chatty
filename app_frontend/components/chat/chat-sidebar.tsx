@@ -1,11 +1,11 @@
 'use client'
 
-import { useChatSidebarStore } from "@/store/use-chat-sidebar";
+import { ChatSidebarStore } from "@/store/chat-sidebar-store";
 import { motion } from "motion/react";
 
 
 const ChatSidebar = () => {
-  const isOpen = useChatSidebarStore((state) => state.isOpen);
+  const {isOpen} = ChatSidebarStore();
 
   return (
     <motion.aside

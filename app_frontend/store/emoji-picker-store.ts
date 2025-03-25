@@ -1,12 +1,12 @@
 import { create } from 'zustand'
 
-interface ChatSidebar {
+interface EmojiPicker {
   isOpen: boolean
   onOpen: () => void
   onClose: () => void
 }
 
-export const useChatSidebarStore = create<ChatSidebar>((set) => ({
+export const EmojiPickerStore = create<EmojiPicker>((set) => ({
   isOpen: false,
   onOpen: () => set((state) => ({ isOpen: true })),
   onClose: () => set((state) => ({ isOpen: false })),
