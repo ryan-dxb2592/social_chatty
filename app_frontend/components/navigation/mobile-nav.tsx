@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LucideIcon, Contact, Phone, Users, Settings, User, MessageSquare, BotMessageSquare } from "lucide-react";
+import { LucideIcon, Contact, Phone, Users, Settings, User, MessageSquare, BotMessageSquare, Moon } from "lucide-react";
 import NavItem from "./components/nav-item";
 import { usePathname } from "next/navigation";
 
@@ -39,16 +39,14 @@ const navItems: { icon: LucideIcon; label: string; href: string }[] = [
   },
 ]
 
-const SideNav = () => {
+const MobileNav = () => {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
 
   return(
-  <div className="hidden md:flex w-20 shrink-0 border-r bg-white flex-col items-center py-2">
-         <div className="p-4 border rounded-md ">
-           <BotMessageSquare/>
-         </div>
-         <div className="flex-1 flex flex-col items-center gap-3 mt-6">
+  <div className="flex md:hidden w-full h-20  shrink-0 border-t bg-white absolute bottom-0 left-0 right-0 z-50 items-center  py-2">
+         
+         <div className="flex-1 flex flex-row items-center justify-center gap-3">
           {navItems.map((item, index) => (
             <NavItem key={item.label + index}
             icon={item.icon}
@@ -58,17 +56,15 @@ const SideNav = () => {
             />
           ))}
           
-        </div>
-        <div className=" flex flex-col items-center gap-2">
-         
+          
           <Avatar className="w-12 h-12 cursor-pointer">
             <AvatarImage src="https://public.readdy.ai/ai/img_res/5f5d3109bb3368cbc35eeaf59ae7cc0e.jpg" />
             <AvatarFallback>ME</AvatarFallback>
           </Avatar>
-        </div>
+      </div>
       </div>)
 };
 
-export default SideNav;
+export default MobileNav;
 
 

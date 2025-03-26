@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
 import { EmojiPickerStore } from "@/store/emoji-picker-store";
-import EmojiPicker from "./components/emoji-picker";
+import EmojiPicker from "./components/emoji-input/emoji-picker";
 
 const ChatMessageInput = () => {        
     const [message, setMessage] = useState("");

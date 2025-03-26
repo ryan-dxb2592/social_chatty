@@ -7,7 +7,7 @@ import ChatList from "./components/chat-list";
 
 const MainSidebar = () => {
   return (
-    <div className="w-80 max-w-80 h-screen max-h-screen border-r flex-shrink-0  bg-white flex flex-col overflow-hidden">
+    <div className="w-full md:w-80 md:max-w-80 h-[calc(100vh-80px)] md:h-screen max-h-screen border-r flex-shrink-0  bg-white flex flex-col overflow-hidden">
       <div className="flex-1 flex flex-col min-h-0 ">
         <SidebarHeader title="Chats" />
         <div className="flex-1 flex flex-col min-h-0">

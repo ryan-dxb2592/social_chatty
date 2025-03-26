@@ -18,13 +18,13 @@ const ChatHeader = () => {
         }
     }
     return (
-        <div className="flex items-center justify-between p-4 h-16 border-b bg-white shrink-0">
-            <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between p-3 h-16 border-b bg-white shrink-0">
+            <div className="flex items-center gap-1">
                 <Button variant="ghost" size="icon" className="cursor-pointer">
                     <ArrowLeft />
                 </Button>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                     <div className="relative border-2 border-white rounded-full">
 
                     <Avatar className="w-12 h-12 border-2 border-white">
@@ -44,7 +44,7 @@ const ChatHeader = () => {
                 </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
                 <Button variant="ghost" size="icon" className="cursor-pointer">
                     <Search className="h-5 w-5" />
                 </Button>
